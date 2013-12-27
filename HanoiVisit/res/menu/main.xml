@@ -4,20 +4,21 @@
         android:id="@+id/action_show_list"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:icon="@drawable/show_list"
+        android:icon="@drawable/action_search"
         android:title="@string/action_show_list"/>
      
     <item
         android:id="@+id/action_show_current_location"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:icon="@drawable/navigation"
+        android:icon="@drawable/action_navigation"
         android:title="@string/action_show_current_location"/>
     
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:showAsAction="never"
+        android:showAsAction="always"
+        android:icon="@drawable/action_settings"
         android:title="@string/action_settings"/>
     
     	

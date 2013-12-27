@@ -5,6 +5,6 @@
         android:orderInCategory="100"
         android:showAsAction="always"
         android:title="@string/action_speak"
-        android:icon="@drawable/mic"/>
+        android:icon="@drawable/action_mic"/>
 
 </menu>
