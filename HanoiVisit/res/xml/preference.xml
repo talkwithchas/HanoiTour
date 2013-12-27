@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+     android:title="Notification">
+
+     <CheckBoxPreference
+       android:key="pref_sound"
+       android:title="Sound"
+       android:summary="Play sound on Notification"
+       android:defaultValue="true"
+       android:icon="@drawable/sound"
+       />
+    <CheckBoxPreference
+       android:key="pref_vibrate"
+       android:title="Vibrate"
+       android:summary="Vibrate device on Notification"
+       android:icon="@drawable/vibrate"
+       />
+  </PreferenceCategory>
+  
+</PreferenceScreen>

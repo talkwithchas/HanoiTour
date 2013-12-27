@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	
+
+</head>
+	<body onload = "getInfo()">
+			<div class="container">
+				<p></p>
+				<p><button type="button" class="btn btn-primary btn-lg btn-block active"><p><span id="name">()</span></p></button><p>
+				<p><img id = "pix" src="" class="img-responsive" alt="Responsive image"></p>
+			
+				<button type="button" class="btn btn btn-default btn-lg btn-block" data-toggle="collapse" data-target="#demo">
+					Description
+				</button>
+				<div id="demo" class="collapse in">
+					<div class="panel panel-default">
+						<div class="panel-body" id="desc">
+							
+						</div>
+					</div>
+				</div>
+				<p><a id="wiki" href="" class="btn btn-primary btn-lg  btn-lg btn-block" role="button">Read more on Wiki</a></p>
+		</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script language="javascript">
+		function getInfo() {
+			var mydata=JSON.parse(info.getData());
+			document.getElementById("name").innerHTML=mydata.name;
+			document.getElementById('pix').src = mydata.pix;
+			document.getElementById("desc").innerHTML=mydata.desc;
+			document.getElementById("wiki").href = mydata.wiki;
+		}
+	</script>	
+	</body>
+</html>

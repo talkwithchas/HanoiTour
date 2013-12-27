@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' upload='true' generator='JOSM'>
+	<node lat='21.0307875' lon='105.8524467'>
+		<tag k='id' v='1' />
+		<tag k='name' v='Ho Hoan Kiem' />
+		<tag k='picture' v='img/hoankiem.jpg' />
+		<tag k='description' v='Hoan Kiem Lake is a lake in the historical center of Hanoi, the capital city of Vietnam. The lake is one of the major scenic spots in the city and serves as a focal point for its public life.' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Ho%C3%A0n_Ki%E1%BA%BFm_Lake' />
+	</node>
+	<node lat='21.0358262' lon='105.8336535'>
+		<tag k='id' v='2' />
+		<tag k='name' v='One Pillar Pagoda' />
+		<tag k='picture' v='img/onepillar.jpg' />
+		<tag k='description' v='The One Pillar Pagoda is a historic Buddhist temple in Hanoi, the capital of Vietnam. It is regarded alongside the Perfume Temple, as one of Vietnam two most iconic temples' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/One_Pillar_Pagoda' />
+	</node>
+	<node lat='21.0291422' lon='105.8361148'>
+		<tag k='id' v='3' />
+		<tag k='name' v='Temple of Literature' />
+		<tag k='picture' v='img/temple.jpg' />
+		<tag k='description' v='The Temple of Literature is a temple of Confucius in Hanoi, northern Vietnam. The temple hosts the first national university. The temple was built in 1070 at the time of King. It is one of several temples in Vietnam which are dedicated to Confucius, sages and scholars. The Temple is located to the south of Thang Long Citadel. The various pavilions, halls, statues and stelae of doctors are places where offering ceremonies, study sessions and the strict exams of the Dai Viet took place. The temple is featured on the back of the 100,000 Vietnamese đồng banknote. Just before the Vietnamese New Year celebration calligraphists will assemble outside the temple. The art works are given as gifts or are used as home decorations for special occasions.' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Temple_of_Literature,_Hanoi' />
+	</node>
+	<node lat='21.0551887' lon='105.8196017'>
+		<tag k='id' v='4' />
+		<tag k='name' v='West lake' />
+		<tag k='picture' v='img/westlake.jpg' />
+		<tag k='description' v='West Lake is a freshwater lake in the center of Hanoi, Vietnam. With a shore length of 17 km (about 10.6 miles), this is the largest lake of the capital and a popular place for recreation with many surrounding gardens, hotels and villas. A small part of West Lake is divided by Thanh Nien road to form Trúc Bạch Lake. One district of Hanoi is named after the lake, Tây Hồ District' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/West_Lake_(Hanoi)' />
+	</node>
+	<node lat='21.0313651' lon='105.8504439'>
+		<tag k='id' v='5' />
+		<tag k='name' v='Hanoi Old Quarter' />
+		<tag k='picture' v='img/oldhanoi.jpg' />
+		<tag k='description' v='Famous for traditional food and views of Ha Noi' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Hanoi#Old_Quarter' />
+	</node>
+	<node lat='21.0241521' lon='105.8579157'>
+		<tag k='id' v='6' />
+		<tag k='name' v='Hanoi Opera House' />
+		<tag k='picture' v='img/operahouse.jpg' />
+		<tag k='description' v='The Hanoi Opera House is an opera house in central Hanoi, Vietnam. It was erected by the French colonial administration between 1901 and 1911.' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Hanoi_Opera_House' />
+	</node>
+		<node lat='21.0367649' lon='105.8347317'>
+		<tag k='id' v='7' />
+		<tag k='name' v='Ho Chi Minh Mausoleum' />
+		<tag k='picture' v='img/mausoleum.jpg' />
+		<tag k='description' v='The Ho Chi Minh Mausoleum is a large memorial in Hanoi, Vietnam. It is located in the centre of Ba Dinh Square, which is the place where Vietminh leader Ho Chi Minh, Chairman of the Communist Party of Vietnam from 1951 until his death in 1969, read the Declaration of Independence on September 2, 1945, establishing the Democratic Republic of Vietnam.' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Ho_Chi_Minh_Mausoleum' />
+	</node>
+	<node  lat='21.0370918' lon='105.8393799'>
+		<tag k='id' v='8' />
+		<tag k='name' v='Imperial Citadel of Thang Long' />
+		<tag k='picture' v='img/citadel.jpg' />
+		<tag k='description' v='The Imperial Citadel of Thang Long  is the cultural complex comprising the royal enclosure first built during the Lý Dynasty and subsequently expanded by the and finally the Nguy� Dynasty. The ruins roughly coincide with the Hanoi Citadel today.' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Imperial_Citadel_of_Th%C4%83ng_Long' />
+	</node>
+	<node lat='21.025917' lon='105.8467748'>
+		<tag k='id' v='9' />
+		<tag k='name' v='Hoa Lo Prison' />
+		<tag k='picture' v='img/hoalo.jpg' />
+		<tag k='description' v='The Hoa Lo Prison was a prison used by the French colonists in Vietnam for political prisoners, and later by North Vietnam for prisoners of war during the Vietnam War when it was sarcastically known to American prisoners of war as the Hanoi Hilton. The prison was demolished during the 1990s, though the gatehouse remains as a museum.' />
+		<tag k='trigger' v='30' />
+		<tag k='media' v='media/hoalo.flv' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/H%E1%BB%8Fa_L%C3%B2_Prison' />
+	</node>
+	<node  lat='21.0317751' lon='105.840228'>
+		<tag k='id' v='10' />
+		<tag k='name' v='VietNam Millitary History Museum' />
+		<tag k='picture' v='img/museum.jpg' />
+		<tag k='description' v='The Viet Nam Military History Museum, set up on July 17, 1956, is one of seven national museums in Vietnam. It covers 12,800 m2. It is situated in central Hanoi, opposite the Lenin Park and near the Ho Chi Minh Mausoleum.' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Vietnam_Military_History_Museum' />
+	</node>
+	<node  lat='21.0391954' lon='105.8181869'>
+		<tag k='id' v='10' />
+		<tag k='name' v='House' />
+		<tag k='picture' v='img/museum.jpg' />
+		<tag k='description' v='My house in Ba Dinh' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Vietnam_Military_History_Museum' />
+	</node>
+	<node  lat='21.0185499' lon='105.7951298'>
+		<tag k='id' v='10' />
+		<tag k='name' v='Office' />
+		<tag k='picture' v='img/museum.jpg' />
+		<tag k='description' v='My office' />
+		<tag k='trigger' v='30' />
+		<tag k='wiki' v='http://en.wikipedia.org/wiki/Vietnam_Military_History_Museum' />
+	</node>
+</osm>
