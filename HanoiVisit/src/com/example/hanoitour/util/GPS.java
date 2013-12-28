@@ -15,7 +15,7 @@ import android.util.Log;
 
 public class GPS extends Service implements LocationListener{
 	private final Context mContext;
-	 
+	 boolean nhung = true;
     // flag for GPS status
     boolean isGPSEnabled = false;
  
