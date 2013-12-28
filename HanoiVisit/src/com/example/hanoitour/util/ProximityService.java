@@ -1,4 +1,4 @@
-package com.example.hanoivisit;
+package com.example.hanoitour.util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,8 +7,10 @@ import java.util.List;
 import org.apache.http.impl.conn.DefaultClientConnection;
 import org.xmlpull.v1.XmlPullParserException;
 
+import com.example.hanoitour.WebActivity;
 import com.example.hanoitour.paser.POIData;
 import com.example.hanoitour.paser.POIParser;
+import com.example.hanoivisit.R;
 
 import android.app.Notification;
 import android.app.NotificationManager;

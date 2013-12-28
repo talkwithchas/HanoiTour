@@ -1,4 +1,6 @@
-package com.example.hanoivisit;
+package com.example.hanoitour;
+
+import com.example.hanoivisit.R;
 
 import android.os.Bundle;
 import android.os.Vibrator;

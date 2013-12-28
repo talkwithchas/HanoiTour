@@ -20,26 +20,26 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <service android:name="com.example.hanoivisit.ProximityService" />
+        <service android:name="com.example.hanoitour.util.ProximityService" />
 
         <activity
-            android:name="com.example.hanoivisit.MainActivity"
+            android:name="com.example.hanoitour.MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.hanoivisit.POIListActivity"
+            android:name="com.example.hanoitour.POIListActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_poilist"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name="com.example.hanoivisit.WebActivity"
+            android:name="com.example.hanoitour.WebActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_web" >
         </activity>
         <activity
-            android:name="com.example.hanoivisit.AnniActivity"
+            android:name="com.example.hanoitour.AnniActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_anni"
             android:launchMode="singleInstance"
@@ -52,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hanoivisit.SettingsActivity"
+            android:name="com.example.hanoitour.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
     </application>

@@ -1,4 +1,4 @@
-package com.example.hanoivisit;
+package com.example.hanoitour.util;
 import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;

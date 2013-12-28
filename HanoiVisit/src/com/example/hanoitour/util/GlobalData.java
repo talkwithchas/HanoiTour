@@ -1,4 +1,4 @@
-package com.example.hanoivisit;
+package com.example.hanoitour.util;
 
 import java.util.List;
 

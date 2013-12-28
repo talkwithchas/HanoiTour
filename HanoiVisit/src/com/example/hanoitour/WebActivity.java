@@ -1,9 +1,11 @@
-package com.example.hanoivisit;
+package com.example.hanoitour;
 
 import java.util.Locale;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.example.hanoivisit.R;
 
 
 import android.media.AudioManager;

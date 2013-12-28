@@ -1,4 +1,4 @@
-package com.example.hanoivisit;
+package com.example.hanoitour.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,9 @@ import java.util.List;
 import org.mapsforge.android.maps.overlay.ItemizedOverlay;
 import org.mapsforge.android.maps.overlay.OverlayItem;
 
+import com.example.hanoitour.WebActivity;
 import com.example.hanoitour.paser.POIData;
+import com.example.hanoivisit.R;
 
 
 import android.app.AlertDialog;

@@ -1,4 +1,4 @@
-package com.example.hanoivisit;
+package com.example.hanoitour;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +15,11 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import com.example.hanoitour.paser.POIData;
 import com.example.hanoitour.paser.POIParser;
+import com.example.hanoitour.util.GPS;
+import com.example.hanoitour.util.GlobalData;
+import com.example.hanoitour.util.MapOverlay;
+import com.example.hanoitour.util.ProximityService;
+import com.example.hanoivisit.R;
 
 import android.os.Bundle;
 import android.os.Environment;
