@@ -24,6 +24,8 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import android.webkit.JavascriptInterface;
+
 
 public class WebActivity extends Activity {
 
@@ -115,6 +117,7 @@ public class WebActivity extends Activity {
 		}
 	}
 	public class MyData {
+		@JavascriptInterface
 		public String getData() throws JSONException {
 			
 			JSONObject json = new JSONObject();
