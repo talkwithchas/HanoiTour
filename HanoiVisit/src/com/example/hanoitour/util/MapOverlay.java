@@ -36,6 +36,7 @@ public class MapOverlay extends ItemizedOverlay{
 	// Removes overlay item i
     public void removeItem(){
     	mOverlays.removeAll(mOverlays);
+    	
         populate();
     }
 	protected OverlayItem createItem(int arg0) {

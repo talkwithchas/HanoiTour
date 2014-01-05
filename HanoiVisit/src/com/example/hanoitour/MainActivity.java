@@ -8,9 +8,11 @@ import java.util.List;
 
 import org.mapsforge.android.maps.MapActivity;
 import org.mapsforge.android.maps.MapView;
+import org.mapsforge.android.maps.MapViewPosition;
 import org.mapsforge.android.maps.overlay.Overlay;
 import org.mapsforge.android.maps.overlay.OverlayItem;
-import org.mapsforge.core.GeoPoint;
+import org.mapsforge.core.model.BoundingBox;
+import org.mapsforge.core.model.GeoPoint;
 import org.xmlpull.v1.XmlPullParserException;
 
 import com.example.hanoitour.paser.POIData;
@@ -23,7 +25,6 @@ import com.example.hanoivisit.R;
 
 import android.os.Bundle;
 import android.os.Environment;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
@@ -40,6 +41,7 @@ public class MainActivity extends MapActivity {
 	ArrayList<String> names;
 	boolean getResult;
 	GPS gps;
+	BoundingBox boundary;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -70,26 +72,41 @@ public class MainActivity extends MapActivity {
 		String baseDir = Environment.getExternalStorageDirectory().getAbsolutePath();
 		System.out.println("Base Directory is : " + baseDir);     
 		mapView.setMapFile(new File("/" + baseDir + "/" + "hanoi.map"));
+		
+		
+		
+		boundary = mapView.getMapDatabase().getMapFileInfo().boundingBox;
+		
+		
 				
 		//overlay
 		mapOverlays = mapView.getOverlays();
 		Drawable drawable = this.getResources().getDrawable(R.drawable.icon);
 		itemizedoverlay = new MapOverlay(drawable, this);
-		
 		gps = new GPS(MainActivity.this);
+		
 		if(gps.canGetLocation){
-			itemizedoverlay.removeItem();
-			GeoPoint point = new GeoPoint(gps.getLatitude(), gps.getLongitude());
-            overlayitem = new OverlayItem(point, "My Location", "Your Location is: \nLatitude: " + gps.getLatitude() + "\nLongitude: " + gps.getLongitude());
-            itemizedoverlay.addOverlay(overlayitem);
-    		mapOverlays.add(itemizedoverlay);
-    		mapView.setCenter(point);
-    		mapView.invalidate(); 
+			if(gps.getLatitude() == 0.0 && gps.getLongitude() == 0.0){
+				Toast.makeText(getApplicationContext(), "Something went wrong, can't get your current location :(", Toast.LENGTH_LONG).show();
+			}else{
+				//check whether user is in hanoi
+				if(boundary.contains(new GeoPoint(gps.getLatitude(), gps.getLongitude())) == true){
+					itemizedoverlay.removeItem();
+					GeoPoint point = new GeoPoint(gps.getLatitude(), gps.getLongitude());
+		            overlayitem = new OverlayItem(point, "My Location", "Your Location is: \nLatitude: " + gps.getLatitude() + "\nLongitude: " + gps.getLongitude());
+		            itemizedoverlay.addOverlay(overlayitem);
+		    		mapOverlays.add(itemizedoverlay);
+		    		mapView.setCenter(point);
+		    		mapView.invalidate();
+				}else{
+					Toast.makeText(getApplicationContext(), "You are not in hanoi, can't show current location on map", Toast.LENGTH_LONG).show();
+				}
+			}
 		}else{
 			gps.showSettingsAlert();
 		}
-		 Intent intent = new Intent(getApplicationContext(), ProximityService.class);
-		 this.startService(intent);
+		Intent intent = new Intent(getApplicationContext(), ProximityService.class);
+		this.startService(intent);
 	}
 
 	@Override
@@ -110,13 +127,22 @@ public class MainActivity extends MapActivity {
 			case R.id.action_show_current_location:
 				gps = new GPS(MainActivity.this);
 				if(gps.canGetLocation){
-					itemizedoverlay.removeItem();
-					GeoPoint point = new GeoPoint(gps.getLatitude(), gps.getLongitude());
-		            overlayitem = new OverlayItem(point, "My Location", "Your Location is: \nLatitude: " + gps.getLatitude() + "\nLongitude: " + gps.getLongitude());
-		            itemizedoverlay.addOverlay(overlayitem);
-		    		mapOverlays.add(itemizedoverlay);
-		    		mapView.setCenter(point);
-		    		mapView.invalidate(); 
+					if(gps.getLatitude() == 0.0 && gps.getLongitude() == 0.0){
+						Toast.makeText(getApplicationContext(), "Something went wrong, can't get your current location :(", Toast.LENGTH_LONG).show();
+					}else{
+						//check whether user is in hanoi
+						if(boundary.contains(new GeoPoint(gps.getLatitude(), gps.getLongitude())) == true){
+							itemizedoverlay.removeItem();
+							GeoPoint point = new GeoPoint(gps.getLatitude(), gps.getLongitude());
+				            overlayitem = new OverlayItem(point, "My Location", "Your Location is: \nLatitude: " + gps.getLatitude() + "\nLongitude: " + gps.getLongitude());
+				            itemizedoverlay.addOverlay(overlayitem);
+				    		mapOverlays.add(itemizedoverlay);
+				    		mapView.setCenter(point);
+				    		mapView.invalidate();
+						}else{
+							Toast.makeText(getApplicationContext(), "You are not in hanoi, can't show current location on map", Toast.LENGTH_LONG).show();
+						}
+					}
 				}else{
 					gps.showSettingsAlert();
 				}
@@ -170,13 +196,24 @@ public class MainActivity extends MapActivity {
 		if(getResult == false){
 			gps = new GPS(MainActivity.this);
 			if(gps.canGetLocation){
-				itemizedoverlay.removeItem();
-				GeoPoint point = new GeoPoint(gps.getLatitude(), gps.getLongitude());
-	            overlayitem = new OverlayItem(point, "My Location", "Your Location is: \nLatitude: " + gps.getLatitude() + "\nLongitude: " + gps.getLongitude());
-	            itemizedoverlay.addOverlay(overlayitem);
-	    		mapOverlays.add(itemizedoverlay);
-	    		mapView.setCenter(point);
-	    		mapView.invalidate(); 
+				if(gps.getLatitude() == 0.0 && gps.getLongitude() == 0.0){
+					Toast.makeText(getApplicationContext(), "Something went wrong, can't get your current location :(", Toast.LENGTH_LONG).show();
+				}else{
+					//check whether user is in hanoi
+					if(boundary.contains(new GeoPoint(gps.getLatitude(), gps.getLongitude())) == true){
+						itemizedoverlay.removeItem();
+						GeoPoint point = new GeoPoint(gps.getLatitude(), gps.getLongitude());
+			            overlayitem = new OverlayItem(point, "My Location", "Your Location is: \nLatitude: " + gps.getLatitude() + "\nLongitude: " + gps.getLongitude());
+			            itemizedoverlay.addOverlay(overlayitem);
+			    		mapOverlays.add(itemizedoverlay);
+			    		mapView.setCenter(point);
+			    		mapView.invalidate();
+					}else{
+						Toast.makeText(getApplicationContext(), "You are not in hanoi, can't show current location on map", Toast.LENGTH_LONG).show();
+					}
+				}
+			}else{
+				gps.showSettingsAlert();
 			}
 		}
 	}

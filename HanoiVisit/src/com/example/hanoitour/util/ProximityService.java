@@ -129,6 +129,7 @@ public class ProximityService extends Service{
 
 	public class ProximityIntentReceiver extends BroadcastReceiver{
 		private static final int NOTIFICATION_ID = 1000;
+		@SuppressWarnings("deprecation")
 		@Override
 		public void onReceive(Context arg0, Intent arg1) {
 			// TODO Auto-generated method stub
@@ -148,14 +149,23 @@ public class ProximityService extends Service{
 				notifIntent.putExtra("pix", pix);
 				notifIntent.putExtra("wiki", wiki);
 				notifIntent.putExtra("desc", desc);
-
-				NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-				PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notifIntent, PendingIntent.FLAG_CANCEL_CURRENT);        
-				Notification notification = createNotification();
-				notification.setLatestEventInfo(arg0, "Entering Proximity!", "You are approaching POI " + name + ". Click to View", pendingIntent);
 				
-				notificationManager.notify(NOTIFICATION_ID, notification);
+				
+				NotificationCompat.Builder builder =  
+			            new NotificationCompat.Builder(getApplicationContext())  
+			            .setSmallIcon(R.drawable.ic_launcher)  
+			            .setContentTitle("Notifications Example")  
+			            .setTicker("Entering proximity!!!")
+			            .setWhen(System.currentTimeMillis())
+			            .setContentText("This is a test notification");  
 
+				PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notifIntent, PendingIntent.FLAG_CANCEL_CURRENT);         
+			    builder.setContentIntent(pendingIntent);  
+
+			    // Add as notification  
+			    NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);  
+			    manager.notify(NOTIFICATION_ID, builder.build());  
+				
 
 				SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 		        boolean isSound = sharedPref.getBoolean("pref_sound", false);
@@ -195,31 +205,7 @@ public class ProximityService extends Service{
 		        }
 		        
 	        }
-				//Toast.makeText(getApplicationContext(), "Vibrate: " + isVibrate + "\n Sound: " + isSound, Toast.LENGTH_LONG).show();
-			
-
 		}
-
-		private Notification createNotification() {
-			Notification notification = new Notification();
-			notification.icon = R.drawable.notification;
-			notification.when = System.currentTimeMillis();
-
-			notification.flags |= Notification.FLAG_AUTO_CANCEL;
-			notification.flags |= Notification.FLAG_SHOW_LIGHTS;
-
-			
-			notification.defaults |= Notification.DEFAULT_LIGHTS;
-
-
-			notification.ledARGB = Color.WHITE;
-			notification.ledOnMS = 1500;
-			notification.ledOffMS = 1500;
-			return notification;
-		}
-
-
-
 	}
 
 	public class MyLocationListener implements LocationListener{

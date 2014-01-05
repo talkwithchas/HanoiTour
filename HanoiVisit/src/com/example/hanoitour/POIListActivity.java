@@ -2,9 +2,6 @@ package com.example.hanoitour;
 
 import java.util.ArrayList;
 
-import org.mapsforge.android.maps.overlay.OverlayItem;
-import org.mapsforge.core.GeoPoint;
-
 import com.example.hanoitour.paser.POIData;
 import com.example.hanoitour.util.GlobalData;
 import com.example.hanoivisit.R;
