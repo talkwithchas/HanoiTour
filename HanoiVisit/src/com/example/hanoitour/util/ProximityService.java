@@ -153,11 +153,12 @@ public class ProximityService extends Service{
 				
 				NotificationCompat.Builder builder =  
 			            new NotificationCompat.Builder(getApplicationContext())  
-			            .setSmallIcon(R.drawable.ic_launcher)  
-			            .setContentTitle("Notifications Example")  
+			            .setSmallIcon(R.drawable.notification)  
+			            .setContentTitle("Entering proximity")  
 			            .setTicker("Entering proximity!!!")
+			            .setAutoCancel(true)
 			            .setWhen(System.currentTimeMillis())
-			            .setContentText("This is a test notification");  
+			            .setContentText("You are approaching POI " + name + " . Click to View");  
 
 				PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notifIntent, PendingIntent.FLAG_CANCEL_CURRENT);         
 			    builder.setContentIntent(pendingIntent);  

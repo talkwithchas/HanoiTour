@@ -85,16 +85,9 @@
 		<tag k='id' v='10' />
 		<tag k='name' v='House' />
 		<tag k='picture' v='img/museum.jpg' />
-		<tag k='description' v='My house in Ba Dinh' />
+		<tag k='description' v='My house in Ba Dinh. Just here for the purpose of testing' />
 		<tag k='trigger' v='30' />
 		<tag k='wiki' v='http://en.wikipedia.org/wiki/Vietnam_Military_History_Museum' />
 	</node>
-	<node  lat='21.0185499' lon='105.7951298'>
-		<tag k='id' v='10' />
-		<tag k='name' v='Office' />
-		<tag k='picture' v='img/museum.jpg' />
-		<tag k='description' v='My office' />
-		<tag k='trigger' v='30' />
-		<tag k='wiki' v='http://en.wikipedia.org/wiki/Vietnam_Military_History_Museum' />
-	</node>
+	
 </osm>
