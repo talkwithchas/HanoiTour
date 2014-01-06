@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class SettingsActivity extends PreferenceActivity{
 	
 	public static final String KEY_PREF_VIBRATE = "pref_vibrate";
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class SettingsActivity extends PreferenceActivity{
 		PreferenceManager.setDefaultValues(getApplicationContext(), R.xml.preference, false);
 		
 		Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-		if(v.hasVibrator()){
+		if(v.hasVibrator() == true){
 			getPreferenceScreen().findPreference(KEY_PREF_VIBRATE).setEnabled(false);
 		}else{
 			getPreferenceScreen().findPreference(KEY_PREF_VIBRATE).setEnabled(false);
